@@ -25,9 +25,9 @@ class Api::UserController < ApplicationController
 
   def update
     if @user.update(user_params)
-      render json: user
+      render json: @user
     else
-      render json: {errors: user.errors}
+      render json: {errors: @user.errors}
     end
   end
 
